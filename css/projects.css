@@ -113,6 +113,15 @@
     transform-origin: 0;
     transform: rotate(-59deg);
     width: 100%;
+    transition: transform 400ms;
+}
+
+.project-navigation div:hover > h3{
+    transform: rotate(0deg);
+    transition: transform 400ms;
+    background-color: var(--black);
+    padding-left: 2rem;
+    border-top-left-radius: 2rem;
 }
 
 
