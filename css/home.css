@@ -52,6 +52,7 @@
     border: 1px solid green;
 }
 .homepage-category-menu p{
+    opacity: 0;
     filter: brightness(1);
     color: var(--title);
     font-size: var(--h4);
