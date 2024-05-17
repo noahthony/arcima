@@ -1,0 +1,118 @@
+
+
+
+/* Showcase section  */
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-md);
+}
+
+
+
+
+/* Homepage category section  */
+
+.homepage-category{
+    display: block;
+}
+
+.homepage-category-container{
+    /* border: 1px solid white; */
+    text-align: center;
+}
+
+.homepage-category-container > *{
+    margin: var(--margin);
+}
+
+
+.homepage-category-menu{
+    --size: 100px;
+
+    display: inline-grid;
+    grid-template-columns: repeat(4, var(--size));
+    grid-template-rows: repeat(4, var(--size));
+    gap: 1rem;
+    /* border: 1px solid red; */
+    justify-content: center;
+    margin-top: var(--margin-md)
+    
+}
+
+/* Transforming the shape of the grid menu items  */
+
+.homepage-category-menu > *{
+    aspect-ratio: 1;
+    grid-column: span 2;
+    filter: brightness(.8);
+    clip-path: path('M 80 20 C 100 0 100 0 120 20 L 180 80 C 200 100 200 100 180 120 L 120 180 C 100 200 100 200 80 180 L 20 120 C 0 100 0 100 20 80 L 80 20');
+    transition: clip-path 700ms;
+    border: 1px solid green;
+}
+.homepage-category-menu p{
+    filter: brightness(1);
+    color: var(--title);
+    font-size: var(--h4);
+}
+.filler{
+    grid-column: 2/ span 2;
+    background-color: gray;
+}
+
+.homepage-category-menu > .catg1:hover,
+.homepage-category-menu > .catg2:hover,
+.homepage-category-menu > .catg3:hover,
+.homepage-category-menu > .catg4:hover{
+    z-index: 100;
+    filter: brightness(1) saturate(1);
+    clip-path: path('M 0 20 C 0 0 0 0 20 0 L 180 0 C 200 0 200 0 200 20 L 200 180 C 200 200 200 200 180 200 L 20 200 C 0 200 0 200 0 180 L 0 20');
+    /* clip-path: path('M 20 200 C 0 200 0 200 0 180 L 0 20 C 0 0 0 0 20 0 L 180 0 C 200 0 200 0 200 20 L 200 180 C 200 200 200 200 180 200 L 20 200'); */
+
+}
+.homepage-category-menu > .filler:hover{
+    filter: brightness(1) saturate(1);
+}
+
+.homepage-category-menu:hover > *{
+    filter: brightness(.4) saturate(.5);
+}
+.homepage-category-menu > div:not(:hover){
+    animation: zIndexFix 500ms;
+}
+
+/* fixing the animation z-index always in back. */
+@keyframes zIndexFix {
+    0%, 100%{
+        z-index: 10;
+    }
+}
+
+.homepage-category-menu div {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+
+.catg1{
+    background-image: url(assets/Medias/img/homepage/categories/web_c_3d_500px.png);
+    background-blend-mode: darken;
+    background-size: 100%;
+}
+.catg2{
+    background-image: url(assets/Medias/img/homepage/categories/web_c_archviz_500px.png);
+    background-size: 100%;
+}
+.catg3{
+    background-image: url(assets/Medias/img/homepage/categories/web_c_cinematic_500px.png);
+    background-size: contain;
+}
+.catg4{
+    background-image: url(assets/Medias/img/homepage/categories/web_c_motiondesign_500px.png);
+    background-size: contain;
+}
+
+
+

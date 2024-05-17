@@ -1,0 +1,118 @@
+
+
+
+
+
+.project-navigation{
+   display: inline-grid;
+   grid-template-columns: repeat(12, 100px);
+   grid-template-rows: 500px;
+   gap:0;
+}
+.project-navigation > *{
+    clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
+    background-color: red;
+    position: relative;
+    text-transform: capitalize;
+}
+/* .project-navigation > div:not(:hover){
+    animation: zIndexFix 500ms;
+} */
+.design,
+.website,
+.archviz,
+.simulation{
+    grid-row: 1 / 2;
+    transition: clip-path 500ms;
+}
+
+/* original states */
+
+.design{
+    background-color: green;
+    grid-column: 1/ span 4;
+}
+.design:hover{
+    grid-column: 1/ span 8;
+    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
+    z-index: 100;
+    transition: clip-path 500ms;
+}
+.design:not(:hover){
+    animation: zIndexFix 500ms;
+    grid-column: 1/span 8;
+}
+
+
+.website{
+    background-color: blue;
+    grid-column: 2/ span 4;
+}
+.website:hover{
+    grid-column: 2/ span 8;
+    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
+    z-index: 100;
+    transition: clip-path 500ms;
+}
+.website:not(:hover){
+    animation: zIndexFix 500ms;
+    grid-column: 2/span 8;
+}
+
+
+.archviz{
+    background-color: grey;
+    grid-column: 3/ span 4;
+}
+.archviz:hover{
+    grid-column: 3/ span 8;
+    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
+    z-index: 100;
+    transition: clip-path 500ms;
+}
+.archviz:not(:hover){
+    animation: zIndexFix 500ms;
+    grid-column: 3/span 8;
+}
+
+
+.simulation{
+    grid-column: 4/ span 4;
+}
+.simulation:hover{
+    grid-column: 4/ span 8;
+    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
+    z-index: 100;
+    transition: clip-path 500ms;
+}
+.simulation:not(:hover){
+    animation: zIndexFix 500ms;
+    grid-column: 4/span 8;
+}
+
+
+
+@keyframes zIndexFix {
+    0%, 100%{
+        z-index: 10;
+    }
+}
+
+
+/* .design:hover,
+.website:hover,
+.archviz:hover,
+.simulation:hover{
+    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
+} */
+
+.project-navigation h3{
+    position: absolute;
+    bottom:0;
+    left: 75px;
+    transform-origin: 0;
+    transform: rotate(-59deg);
+    width: 100%;
+}
+
+
