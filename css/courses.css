@@ -1,0 +1,88 @@
+
+
+
+
+.courses{
+    display:block;
+}
+.courses > *{
+    margin-bottom: var(--margin-md);
+}
+.courses > div{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--margin);
+}
+
+.platforms > * ,
+.best-seller > *{
+    width: 35%;
+    height: 250px;
+    border-radius: var(--margin-sm);
+    padding: var(--margin);
+}
+.platforms-img,
+.best-seller-img{
+    width: 60%;
+}
+
+.platforms-img{
+    background-image: url(../css/assets/Medias/img/courses/Course_1_1378x433.png);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.img-desc{
+    font-size: var(--h3);
+    color: var(--title);
+    width: 15rem;
+}
+
+.best-seller-img{
+    background-image: url(../css/assets/medias/img/courses/Course_2_773x261.png);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.platforms > * {
+    background-color: green;
+
+}
+.best-seller > * {
+    background-color: aqua;
+}
+
+/* platforms profile */
+
+.platform-profile{
+    display:block;
+}
+.platform-profile > *{
+    margin-bottom: var(--margin-md);
+}
+
+.card-row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--margin-md)
+}
+
+.card .profile img{
+    width: 4rem;
+    border-radius: 50%;
+}
+
+
+/* encouragement */
+.encouragement{
+    display: block;
+    text-align: center;
+}
