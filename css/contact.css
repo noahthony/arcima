@@ -110,6 +110,7 @@ fieldset{
 
 fieldset legend{
     font-size: var(--h5);
+    font-family: var(--ff-subhead);
     color: var(--title);
     margin-bottom: var(--margin);
     text-transform: capitalize;
