@@ -143,6 +143,7 @@ label{
 textarea{
     width: 100%;
     border-radius: var(--margin-sm);
+    padding: var(--margin-sm);
 }
 select{
     width: 9rem;
