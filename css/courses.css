@@ -14,7 +14,7 @@
     width: 100%;
     display: block;
     padding: var(--margin-md) var(--margin);
-    background-color: rgba(0, 0, 0, 0.4) ;
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: var(--margin);
 }
 
@@ -38,9 +38,8 @@
 }
 
 
-/* courses */
 
-
+/* courses display section */
 
 .courses{
     display:block;
@@ -48,7 +47,7 @@
 .courses > *{
     margin-bottom: var(--margin-md);
 }
-.courses > div{
+.courses > div {
     display: flex;
     justify-content: space-between;
     gap: var(--margin);
@@ -59,8 +58,21 @@
     width: 35%;
     height: 250px;
     border-radius: var(--margin-sm);
-    padding: var(--margin);
 }
+
+.platform-content,
+.best-seller-content{
+    padding: var(--margin);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+}
+
+
+
+
 .platforms-img,
 .best-seller-img{
     width: 60%;
@@ -72,15 +84,35 @@
     justify-content: flex-start;
     align-items: center;
 }
+
 .img-desc, 
 .description{
     font-size: var(--h3);
     color: var(--title);
-    width: 15rem;
+    width: 16rem;
 }
-.platform-logo img{
-    width: 5rem;
+.description{
+    text-align: center;
 }
+
+.img-desc{
+    display: inline-block;
+    margin: 2rem 0 auto;
+}
+.skillshare{
+    width: 10rem;
+}
+.udemy{
+    width: 7rem;
+}
+
+.platform-logo{
+    display: flex;
+    gap: var(--margin-sm)
+}
+
+
+
 
 .best-seller-img{
     background-image: url(../css/assets/medias/img/courses/Course_2_773x261.png);
@@ -89,13 +121,13 @@
     align-items: center;
 }
 
-.platforms > * {
+/* .platforms > * {
     background-color: green;
 
 }
 .best-seller > * {
     background-color: aqua;
-}
+} */
 
 /* platforms profile */
 
@@ -117,8 +149,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--margin-md)
 }
+
+.card .udemy-pf{
+    margin-right: var(--margin-md);
+}
+
 .platform img{
     width: 16rem;
 }

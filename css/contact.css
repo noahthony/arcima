@@ -2,3 +2,45 @@
 
 
 
+.page-title{
+    text-transform: uppercase;
+    text-align: center;
+}
+section{
+    display: block;
+}
+.card-row{
+    display: flex;
+    gap: var(--margin);
+    justify-content: space-between;
+}
+
+.card{
+    width: 20rem;
+    height: 12rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: flex-end;
+}
+
+.real-estate{
+    background-image: url(assets/Medias/img/projects/archviz_1197px.png);
+}
+.arch-interact{
+    background-image: url(assets/Medias/img/projects/website_1197px.png);
+}
+.game-cinema{
+    background-image: url(assets/Medias/img/projects/cinematic_1197px.png);
+}
+.product-showcase{
+    background-image: url(assets/Medias/img/projects/product_1197px.png);
+}
+
+.card > p{
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 5px auto 5px;
+}

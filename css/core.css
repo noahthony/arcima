@@ -136,3 +136,9 @@ button{
     border: 0;
     box-shadow: var(--green);
 }
+.dark-screen{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    padding: var(--margin);
+}
