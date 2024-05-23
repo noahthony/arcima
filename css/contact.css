@@ -45,7 +45,7 @@ section{
     width: 100%;
     text-align: center;
     text-transform: capitalize;
-    padding: 5px auto 5px;
+    padding: 5px 0;
     border-radius: 0 0 var(--margin) var(--margin);
 }
 
@@ -60,5 +60,86 @@ section{
 .card:hover{
     filter: grayscale(0) brightness(1);
     transition: filter 500ms, box-shadow 700ms;
+}
+.real-estate:hover,
+.game-cinema:hover{
     box-shadow: 0 0 var(--margin-md) -1rem var(--green);
+}
+
+.arch-interact:hover,
+.product-showcase:hover{
+    box-shadow: 0 0 var(--margin-md) -1rem var(--blue);
+}
+
+/* form styling */
+
+.contact-form form{
+    background-color: rgba(256, 256, 256, 0.05);
+    padding: var(--margin);
+    border-radius: var(--margin);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--margin);
+}
+
+.about-user{
+    grid-column: 1/2;
+}
+.project-info{
+    grid-column: 2/3;
+}
+.user-note{
+    grid-column: 1/span 2;
+    text-align: center;
+}
+.contact-method{
+    grid-column: 1/ span 2;
+    text-align: center;
+}
+
+fieldset{
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-color: var(--green);
+}
+
+fieldset legend{
+    font-size: var(--h5);
+    color: var(--title);
+    margin-bottom: var(--margin);
+    text-transform: capitalize;
+}
+.user-note legend,
+.contact-method legend{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-user legend{
+    margin-bottom: 0;
+}
+input,
+label{
+    color: var(--title);
+    font-size: 1.3rem;
+    margin:1rem 0;
+    text-transform: capitalize;
+}
+
+.about-user input{
+    font-style: italic;
+    width: 100%;
+    padding: 8px 5px;
+    border: 0;
+    border-bottom: 1px solid var(--blue);
+    outline: none;
+    background-color: transparent;
+}
+textarea{
+    width: 100%;
+    border-radius: var(--margin-sm);
+}
+select{
+    width: 9rem;
 }
