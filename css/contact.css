@@ -23,6 +23,8 @@ section{
     background-repeat: no-repeat;
     display:flex;
     align-items: flex-end;
+    border-radius: var(--margin);
+    transition: filter 700ms;
 }
 
 .real-estate{
@@ -44,4 +46,19 @@ section{
     text-align: center;
     text-transform: capitalize;
     padding: 5px auto 5px;
+    border-radius: 0 0 var(--margin) var(--margin);
+}
+
+/* hover effects and animations  */
+/* .card-row > *{
+    transition: filter 700ms;
+} */
+.card-row:hover > *{
+    filter: grayscale(0.7) brightness(0.5);
+    transition: filter 1000ms;
+}
+.card:hover{
+    filter: grayscale(0) brightness(1);
+    transition: filter 500ms, box-shadow 700ms;
+    box-shadow: 0 0 var(--margin-md) -1rem var(--green);
 }
