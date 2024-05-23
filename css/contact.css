@@ -8,6 +8,10 @@
 }
 section{
     display: block;
+    margin-bottom: var(--margin-sm);
+}
+.contact-form{
+    margin-top: var(--margin-md);
 }
 .card-row{
     display: flex;
