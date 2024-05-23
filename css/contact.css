@@ -42,5 +42,6 @@ section{
     background-color: #000;
     width: 100%;
     text-align: center;
+    text-transform: capitalize;
     padding: 5px auto 5px;
 }
