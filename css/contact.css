@@ -10,6 +10,24 @@ section{
     display: block;
     margin-bottom: var(--margin-sm);
 }
+
+.navigation-lines{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,12rem);
+    justify-items: center;
+}
+.navigation-lines > *{
+    border: 1px solid red;
+}
+line1{
+    grid-column: 1/ span 2;
+}
+
+
+
+
+
 .contact-form{
     margin-top: var(--margin-md);
 }
@@ -28,6 +46,7 @@ section{
     display:flex;
     align-items: flex-end;
     transition: filter 700ms;
+    border-radius: var(--margin);
 }
 
 .real-estate{
@@ -50,6 +69,8 @@ section{
     text-align: center;
     text-transform: capitalize;
     padding: 5px 0;
+    border-bottom-left-radius: var(--margin);
+    border-bottom-right-radius: var(--margin);
 }
 
 /* hover effects and animations  */
@@ -106,6 +127,11 @@ fieldset{
     border-bottom: 0;
     border-top: 0;
 }
+fieldset label{
+    display: inline-block;
+    width: 40%;
+}
+
 
 fieldset legend{
     font-size: var(--h5);
@@ -120,18 +146,26 @@ fieldset legend{
     margin-left: auto;
     margin-right: auto;
 }
-.about-user legend{
+/* .about-user legend{
     margin-bottom: 0;
-}
+} */
 input,
 label{
     color: var(--title);
     font-size: 1.3rem;
-    margin:1rem 0;
+    margin:var(--margin-sm) 0;
     text-transform: capitalize;
 }
+fieldset span{
+    display: inline-block;
+    border-radius: 50%;
+    width: 1.5rem;
+    margin-left: 1rem;
+    text-align: center;
+    background-color: rgba(256, 256, 256, 0.3);
+}
 
-.about-user input{
+/* .about-user input{
     font-style: italic;
     width: 100%;
     padding: 8px 5px;
@@ -139,7 +173,7 @@ label{
     border-bottom: 1px solid var(--blue);
     outline: none;
     background-color: transparent;
-}
+} */
 textarea{
     width: 100%;
     border-radius: var(--margin-sm);

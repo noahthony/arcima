@@ -26,7 +26,12 @@
 
         <h2 class="page-title"> interested in</h2>
         <section class="contact-navigation">
-            <div class="navigation-lines"></div>
+            <div class="navigation-lines">
+                <div class="line1">o</div>
+                <div class="line2">o</div>
+                <div class="line3">o</div>
+                <div class="line4">o</div>
+            </div>
             <div class="card-row">
                 <div class="card real-estate">
                     <p class="card-content">real estate web app</p>
@@ -47,14 +52,19 @@
             <form action="blank" method="post">
                 <fieldset class="about-user">
                     <legend>personal information</legend>
-                    <input type="text" name="name" id="Name" placeholder="Name"><br>
-                    <input type="tel" name="Phone" id="Phone" placeholder="Phone number"><br>
-                    <input type="email" name="email" id="email" placeholder="e-mail"><br>
-                    <input type="text" name="telegram" id="telegram" placeholder="Telegram">
+                   <label for="name">Name</label><input type="text" name="name" id="Name"><br>
+                    <label for="phone">Phone</label><input type="tel" name="phone" id="phone"><br>
+                    <label for="email">e-mail</label><input type="email" name="email" id="email"><br>
+                   <label for="telegram">Telegram</label><input type="text" name="telegram" id="telegram">
                     
                 </fieldset>
                 <fieldset class="project-info">
                     <legend>Project information</legend>
+
+                    <label>story board <span>?</span></label> <input type="checkbox" name="storyboard" id="storyboard"><br>
+                    <label>intro & outro design <span>?</span></label> <input type="checkbox" name="in-outro" id="in-outro"><br>
+                    <label>Character count <span>?</span></label> <input type="number" name="CharNumb" id="charNumb"><br>
+                    <label>length <span>?</span></label> <input type="number" name="length" id="length"><br>
                     <select name="budget" id="budget">
                         <option selected value="none">-- Select Budget --</option>
                         <option value="range1">($)500 - 1000</option>
@@ -63,11 +73,6 @@
                         <option value="range4">($)5000 - 10 000</option>
                         <option value="range5">($) 10 000+</option>
                     </select><br>
-                    <label><input type="checkbox" name="" id="">  Required Services</label><br>
-                    <label><input type="checkbox" name="" id="">  character count</label><br>
-                    <label><input type="checkbox" name="" id="">  story board</label><br>
-                    <label><input type="checkbox" name="" id="">  length</label><br>
-                    <label><input type="checkbox" name="" id="">  intro & outro design</label><br>
                 </fieldset>
                 <fieldset class="user-note">
                     <legend>Please describe your desired cinematic</legend>
