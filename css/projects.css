@@ -8,25 +8,42 @@
    grid-template-columns: repeat(12, 100px);
    grid-template-rows: 500px;
    gap:0;
+   transition: 500ms;
 }
 .project-navigation > *{
     clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
     background-color: red;
     position: relative;
     text-transform: capitalize;
+    grid-row: 1 / 2;
+    transition: clip-path 500ms, grid 500ms;
+    animation: grid 500ms;
 }
 /* .project-navigation > div:not(:hover){
     animation: zIndexFix 500ms;
 } */
-.design,
+/* .design,
 .website,
 .archviz,
 .simulation{
-    grid-row: 1 / 2;
-    transition: clip-path 500ms;
-}
+} */
 
 /* original states */
+
+/* .design{
+    background-color: green;
+    grid-column: 1/ span 4;
+}
+.design:hover{
+    grid-column: 1/ span 8;
+    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
+    z-index: 100;
+    transition: clip-path 500ms;
+}
+.design:not(:hover){
+    animation: zIndexFix 500ms;
+    grid-column: 1/span 8;
+} */
 
 .design{
     background-color: green;
@@ -42,6 +59,7 @@
     animation: zIndexFix 500ms;
     grid-column: 1/span 8;
 }
+
 
 
 .website{
@@ -125,3 +143,57 @@
 }
 
 
+
+.project-navigation-test{
+
+    --first: 0;
+    --second: 100;
+    --third: 200;
+    --fourth: 300;
+    --enlarge: 800px;
+
+    position: relative;
+    display: block;
+    border: 1px solid gray;
+    width: 100%;
+    height: 500px;
+
+}
+.project-navigation-test > *{
+    clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
+    position: absolute;
+    text-transform: capitalize;
+    height: 500px;
+    display: inline-block;
+    border: 1px solid white;
+    width: 400px;
+    bottom: 0;
+}
+
+.design-test{
+    background-color: green;
+    left:0;
+    bottom: 0;
+}
+.website-test{
+    background-color: blue;
+    left: 100px;
+}
+.archviz-test{
+    background-color: gray;
+    left: 200px;
+}
+.simulation-test{
+    background-color: red;
+    left: 300px;
+}
+
+
+.design-test:hover{
+    z-index: 10;
+    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
+    width: var(--enlarge);
+}
+.design-test:hover + .website-test{
+    left: 500px;
+}

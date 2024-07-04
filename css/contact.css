@@ -10,6 +10,7 @@ section{
     display: block;
     margin-bottom: var(--margin-sm);
 }
+.contact-navigation
 
 .navigation-lines{
     display:grid;
@@ -20,8 +21,13 @@ section{
 .navigation-lines > *{
     border: 1px solid red;
 }
-line1{
-    grid-column: 1/ span 2;
+
+.line1, .line2{
+    border: 1px solid var(--blue)
+}
+.line3, .line4{
+    border: 1px solid var(--green)
+    /* grid-column: 1/ span 2; */
 }
 
 
@@ -149,13 +155,26 @@ fieldset legend{
 /* .about-user legend{
     margin-bottom: 0;
 } */
-input,
 label{
     color: var(--title);
     font-size: 1.3rem;
     margin:var(--margin-sm) 0;
     text-transform: capitalize;
 }
+input{
+    color:  var(--black);
+    font-size: 1.1rem;
+    padding: 0 .5em;
+    border: 0;
+    border-radius: 5px;
+}
+input[type="text"]{
+    width: 15rem;
+}
+input[type=checkbox]{
+    transform: scale(1.5);
+}
+
 fieldset span{
     display: inline-block;
     border-radius: 50%;
@@ -163,6 +182,75 @@ fieldset span{
     margin-left: 1rem;
     text-align: center;
     background-color: rgba(256, 256, 256, 0.3);
+    position: relative;
+}
+.helpContent{
+    display:none;
+    --size: 3rem;
+    --height:2rem;
+    position: absolute;
+    width: 20rem;
+    height: 4rem;
+    padding: 0 1.5rem 0;
+    background-color: var(--title);
+    color: var(--blue);
+    bottom: -1.35rem;
+    left: 4rem;
+    border-radius: 1.5rem 0.5rem 0.5rem 1.5rem;
+    text-align: left;
+}
+.helpContent::before{
+    content:'';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: var(--height) solid transparent;
+    border-bottom: var(--height) solid transparent;
+    border-right: var(--size) solid var(--title);
+    top:0;
+    left: -1.8rem;
+}
+.select-parent{
+    display: inline-block;
+    position: relative;
+}
+select{
+    font-size: 1.1rem;
+    width: 15rem;
+    padding: 0 .5em;
+    border: 1px;
+    border-radius: 5px;
+}
+.select-arrow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: #c2c2c2;
+    /* background: red; */
+    height: 95%;
+    width: 1.2rem;
+    border: 0;
+    border-radius:0 5px 5px 0;
+    pointer-events: none;
+}
+
+/* creating a triangle  */
+.select-arrow::before,
+.select-arrow::after{
+    --size: .3em;
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.select-arrow::before{
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid var(--black);
+    top: 40%;
+    right: 25%;
 }
 
 /* .about-user input{
@@ -179,6 +267,4 @@ textarea{
     border-radius: var(--margin-sm);
     padding: var(--margin-sm);
 }
-select{
-    width: 9rem;
-}
+
