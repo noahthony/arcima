@@ -52,6 +52,7 @@ body{
     grid-template-areas: 
         ". header ."
         ". container ."
+        "maintenance maintenance maintenance"
         ". footer .";
     background-color: var(--black);
     color: var(--text);
@@ -69,6 +70,9 @@ header{
 .container{
     grid-area: container;
 }
+.maintenance{
+    grid-area: maintenance;
+}
 footer{
     grid-area: footer;
     text-align: center;
@@ -76,6 +80,7 @@ footer{
 
 section{
     margin: var(--margin-lg) auto;
+    margin-bottom: 0;
     display: flex;
     flex-direction: row;
     gap: var(--margin-md);
@@ -142,4 +147,21 @@ button{
     width: 100%;
     height: 100%;
     padding: var(--margin);
+}
+
+
+
+
+
+
+.maintenance{
+    height: 85vh;
+    background: url(assets/Medias/img/others/maintenance_gears.jpg);
+    background-position: center;
+    background-size: cover;
+    border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .8));
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+
 }

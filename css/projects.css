@@ -50,7 +50,7 @@
     grid-column: 1/ span 4;
 }
 .design:hover{
-    grid-column: 1/ span 8;
+    grid-column: 1/ span 4;
     clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
     z-index: 100;
     transition: clip-path 500ms;
@@ -58,6 +58,10 @@
 .design:not(:hover){
     animation: zIndexFix 500ms;
     grid-column: 1/span 8;
+}
+
+.project-navigation:has(.design:hover){
+    grid-template-columns: 400px repeat(11,100px);
 }
 
 
@@ -197,3 +201,23 @@
 .design-test:hover + .website-test{
     left: 500px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

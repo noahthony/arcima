@@ -55,13 +55,13 @@ section{
     border-radius: var(--margin);
 }
 
-.real-estate{
+.web-app{
     background-image: url(assets/Medias/img/projects/archviz_1197px.png);
 }
-.arch-interact{
+.archviz{
     background-image: url(assets/Medias/img/projects/website_1197px.png);
 }
-.game-cinema{
+.cinematic{
     background-image: url(assets/Medias/img/projects/cinematic_1197px.png);
 }
 .product-showcase{
@@ -77,27 +77,33 @@ section{
     padding: 5px 0;
     border-bottom-left-radius: var(--margin);
     border-bottom-right-radius: var(--margin);
+    
 }
 
 /* hover effects and animations  */
 /* .card-row > *{
     transition: filter 700ms;
 } */
-.card-row:hover > *{
-    filter: grayscale(0.7) brightness(0.5);
-    transition: filter 1000ms;
+.card-row > *,
+.inactive{
+    filter: grayscale(0.7) brightness(0.2);
+    transition: filter 1000ms, transform 1000ms;
 }
-.card:hover{
+.card:hover,
+.active{
     filter: grayscale(0) brightness(1);
-    transition: filter 500ms, box-shadow 700ms;
+    transition: filter 500ms, box-shadow 700ms, transform 1000ms;
 }
-.real-estate:hover,
-.game-cinema:hover{
+.active{
+    transform: scale(1.15);
+}
+.cinematic:hover,
+.product-showcase:hover{
     box-shadow: 0 0 var(--margin-md) -0.5rem var(--green);
 }
 
-.arch-interact:hover,
-.product-showcase:hover{
+.archviz:hover,
+.web-app:hover{
     box-shadow: 0 0 var(--margin-md) -0.5rem var(--blue);
 }
 
@@ -168,7 +174,9 @@ input{
     border: 0;
     border-radius: 5px;
 }
-input[type="text"]{
+input[type="text"],
+input[type="email"],
+input[type="tel"]{
     width: 15rem;
 }
 input[type=checkbox]{
@@ -189,17 +197,18 @@ fieldset span{
     --size: 3rem;
     --height:2rem;
     position: absolute;
-    width: 20rem;
-    height: 4rem;
-    padding: 0 1.5rem 0;
-    background-color: var(--title);
-    color: var(--blue);
-    bottom: -1.35rem;
+    width: 21rem;
+    height: auto;
+    padding: 1rem 2rem;
+    background-color: var(--black);
+    color: var(--text);
+    top: 0;
     left: 4rem;
-    border-radius: 1.5rem 0.5rem 0.5rem 1.5rem;
+    border-radius:1rem;
     text-align: left;
+    z-index: 10;
 }
-.helpContent::before{
+/* .helpContent::before{
     content:'';
     position: absolute;
     height: 0;
@@ -209,7 +218,7 @@ fieldset span{
     border-right: var(--size) solid var(--title);
     top:0;
     left: -1.8rem;
-}
+} */
 .select-parent{
     display: inline-block;
     position: relative;
@@ -217,9 +226,10 @@ fieldset span{
 select{
     font-size: 1.1rem;
     width: 15rem;
-    padding: 0 .5em;
+    padding: .20em .6em;
     border: 1px;
     border-radius: 5px;
+    text-align: center;
 }
 .select-arrow{
     position: absolute;
@@ -266,5 +276,10 @@ textarea{
     width: 100%;
     border-radius: var(--margin-sm);
     padding: var(--margin-sm);
+}
+
+.contact-form button,
+.hide{
+    display: none;
 }
 
