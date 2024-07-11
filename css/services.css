@@ -8,7 +8,6 @@
 }
 .project-navigation > div{
     clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
-    background-color: navajowhite;
     height: 500px;
     width: 500px;
     position: absolute;
@@ -39,14 +38,20 @@
     background-color: var(--black);
 }
 .archviz{
+    background-color: var(--green);
     left:0;
 }
 .web-app{
     left:100px;
+    background-color: navajowhite;
+
 }
 .cinematic{
     left: 200px;
+    background-color: var(--green);
 }
 .showcase{
     left: 300px;
+    background-color: navajowhite;
+
 }
