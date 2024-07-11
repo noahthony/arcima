@@ -36,7 +36,7 @@ const menu = [
 
 for(let i = 0, c = menu.length; i < c; i++){
     menu[i].element.addEventListener('mousedown',(e)=>{
-       
+          
         // check for any node that isn't same as the target and disabling active mode
         for(let a = 0; a<c; a++){
 
@@ -60,96 +60,3 @@ for(let i = 0, c = menu.length; i < c; i++){
         }
     });
 }
-
-// corresponding sections to be displayed or hidden
-
-
-// const smaller = "clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500'); width: ";
-// const bigger = "clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');"
-// window.addEventListener('click', (e)=>{
-//     if(!archviz.classList.contains('active')){
-//         archviz.style
-//     }
-// })
-// archviz menu
-
-// archviz.addEventListener('mouseover', (e)=>{
-//     webApp.style = 'left: '+ (100+400)+'px;';
-//     cinematic.style = 'left: '+ (200+400)+'px;';
-//     showcase.style = 'left: '+ (300+400)+'px;';
-// });
-
-// archviz.addEventListener('mouseout', (e)=>{
-//     webApp.style = 'left: '+ (100)+'px;';
-//     cinematic.style = 'left: '+ (200)+'px;';
-//     showcase.style = 'left: '+ (300)+'px;';
-// });
-
-// archviz.addEventListener('mousedown',(e)=>{
-    
-
-    
-    // archviz.setAttribute('active', 'true')
-    // webApp.style = 'left: '+ (100+400)+'px;';
-    // cinematic.style = 'left: '+ (200+400)+'px;';
-    // showcase.style = 'left: '+ (300+400)+'px;';
-
-
-
-//     archvizSection.classList.remove('hide');
-//     webAppSection.classList.add('hide');
-//     cinematicSection.classList.add('hide');
-//     showcaseSection.classList.add('hide');
-    
-    
-// });
-
-// web app  menu 
-
-
-// webApp.addEventListener('mousedown',(e)=>{
-
-    // webApp.classList.add('active');
-    // cinematic.style = 'left: '+ (200+400)+'px;'
-    // showcase.style = 'left: '+ (300+400)+'px;'
-
-
-//     archvizSection.classList.add('hide');
-//     webAppSection.classList.remove('hide');
-//     cinematicSection.classList.add('hide');
-//     showcaseSection.classList.add('hide');
-    
-    
-// });
-
-
-// cinematic menu
-
-// cinematic.addEventListener('mouseover', (e)=>{
-    // showcase.style = 'left: '+ (300+400)+'px;'
-// });
-// cinematic.addEventListener('mouseout', (e)=>{
-    // showcase.style = 'left: '+ (300)+'px;'
-// });
-// archviz.addEventListener('mousedown',(e)=>{
-    // archvizSection.classList.remove('hide');
-//     webAppSection.classList.add('hide');
-//     cinematicSection.classList.add('hide');
-//     showcaseSection.classList.add('hide');
-// });
-
-
-// showcase.addEventListener('mousedown',(e)=>{
-//     archviz.setAttribute('active', 'false');
-//     webApp.setAttribute('active', 'false');
-//     cinematic.setAttribute('active', 'false');
-//     showcase.setAttribute('active', 'true');
-    
-//     archvizSection.classList.add('hide');
-//     webAppSection.classList.add('hide');
-//     cinematicSection.classList.add('hide');
-//     showcaseSection.classList.remove('hide');
-    
-    
-// });
-
