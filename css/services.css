@@ -6,17 +6,24 @@
     background-color: aqua;
     position: relative;
 }
-.project-navigation > div{
-    clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
+:where(.archviz, .web-app, .cinematic, .showcase){
     height: 500px;
-    width: 500px;
     position: absolute;
     transition: 500ms;
 }
-.project-navigation > div:hover{
+:where(.archviz, .web-app, .cinematic, .showcase)[active='false']{
+    filter: brightness(0.8);
+    clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
+    width: 500px;
+}
+:where(.archviz, .web-app, .cinematic, .showcase):hover{
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+:where(.archviz, .web-app, .cinematic, .showcase)[active='true']{
+    filter: brightness(1); 
     clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
     width: 800px;
-
 }
 
 .project-navigation h3{
@@ -30,9 +37,10 @@
     width: 100%;
     margin-right: 0;
     transition: transform 400ms, background-color 600ms;
+    pointer-events: none;
 }
 
-.project-navigation div:hover > h3{
+h3[active='true']{
     transform: rotate(0deg);
     transition: transform 400ms;
     background-color: var(--black);
@@ -55,3 +63,24 @@
     background-color: navajowhite;
 
 }
+
+
+
+
+/* taking care of the dynamic section */
+
+.archviz-section,
+.web-app-section,
+.cinematic-section,
+.showcase-section{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+

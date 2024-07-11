@@ -151,7 +151,10 @@ button{
 
 
 
-
+/* To hide elements from view  */
+.hide{
+    display: none;
+}
 
 
 .maintenance{
