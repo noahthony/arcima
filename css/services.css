@@ -22,8 +22,9 @@
 }
 :where(.archviz, .web-app, .cinematic, .showcase)[active='true']{
     filter: brightness(1); 
-    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
-    width: 800px;
+    /* clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500'); */
+    clip-path: path('M 0 500 L 300 0 L 1000 0 L 700 500 L 0 500');
+    width: 1000px;
 }
 
 .project-navigation h3{

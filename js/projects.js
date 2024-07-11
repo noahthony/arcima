@@ -52,7 +52,7 @@ for(let i = 0, c = menu.length; i < c; i++){
         }
         // pushes the other element forward
         for(let j = i+1; j < c; j++){
-            menu[j].element.style = 'left:' + ((j*100)+400) + 'px;';
+            menu[j].element.style = 'left:' + ((j*100)+600) + 'px;';
         }
         // reset the element back in place
         for(let k = i; k >= 0; k--){
