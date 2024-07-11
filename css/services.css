@@ -1,0 +1,52 @@
+
+
+
+.project-navigation{
+    height: 500px;
+    background-color: aqua;
+    position: relative;
+}
+.project-navigation > div{
+    clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
+    background-color: navajowhite;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    transition: 500ms;
+}
+.project-navigation > div:hover{
+    clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500');
+    width: 800px;
+
+}
+
+.project-navigation h3{
+    position: absolute;
+    bottom:0;
+    left: 75px;
+    transform-origin: 0;
+    transform: rotate(-59deg);
+    border-top-left-radius: 2rem;
+    padding-left: 2rem;
+    width: 100%;
+    margin-right: 0;
+    transition: transform 400ms, background-color 600ms;
+}
+
+.project-navigation div:hover > h3{
+    transform: rotate(0deg);
+    transition: transform 400ms;
+    background-color: var(--black);
+}
+.archviz{
+    left:0;
+}
+.web-app{
+    left:100px;
+}
+.cinematic{
+    left: 200px;
+}
+.showcase{
+    left: 300px;
+}

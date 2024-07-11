@@ -5,23 +5,48 @@
 // getting all the necessary menu items
 
 
-// const projectNavigationItems = document.querySelectorAll('.project-navigation > div');
-// const projectNavigation = document.querySelector('.project-navigation');
+const projectNavigationItems = document.querySelectorAll('.project-navigation > div');
+const projectNavigation = document.querySelector('.project-navigation');
 
-// for( let i = 0, c = projectNavigationItems.length, gridAtStart = 2, gridAtEnd = 6; i < c; i++){
-//     projectNavigationItems[i].addEventListener('mousemove', (e)=> {
-//         switch(i){
-//             case i=0:
-//                 // projectNavigationItems[i+1].style = 'grid-column:'+ (gridAtEnd + i) + '/ span 4;'
-//                 projectNavigation.style = 'grid-template-columns: 400px repeat(11, 100px)';
-//                 break;
-//             case i=1:
-//                 projectNavigation.style = 'grid-template-columns: 100px 400px repeat(10, 100px)';
 
-//         }
-        
-//     });
-//     projectNavigationItems[i].addEventListener('mouseout', (e)=> {
-//         projectNavigation.style= 'grid-template-columns: repeat(12, 100px);';
-//     })
-// }
+
+const archviz = document.querySelector('.archviz');
+const webApp = document.querySelector('.web-app');
+const cinematic = document.querySelector('.cinematic');
+const showcase = document.querySelector('.showcase');
+
+// archviz menu
+
+archviz.addEventListener('mouseover', (e)=>{
+    webApp.style = 'left: '+ (100+400)+'px;';
+    cinematic.style = 'left: '+ (200+400)+'px;'
+    showcase.style = 'left: '+ (300+400)+'px;'
+});
+
+archviz.addEventListener('mouseout', (e)=>{
+    webApp.style = 'left: '+ (100)+'px;';
+    cinematic.style = 'left: '+ (200)+'px;'
+    showcase.style = 'left: '+ (300)+'px;'
+});
+
+// web app  menu 
+
+webApp.addEventListener('mouseover', (e)=>{
+    cinematic.style = 'left: '+ (200+400)+'px;'
+    showcase.style = 'left: '+ (300+400)+'px;'
+});
+webApp.addEventListener('mouseout', (e)=>{
+    cinematic.style = 'left: '+ (200)+'px;'
+    showcase.style = 'left: '+ (300)+'px;'
+});
+
+
+// cinematic menu
+
+cinematic.addEventListener('mouseover', (e)=>{
+    showcase.style = 'left: '+ (300+400)+'px;'
+});
+cinematic.addEventListener('mouseout', (e)=>{
+    showcase.style = 'left: '+ (300)+'px;'
+});
+
