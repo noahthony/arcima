@@ -3,7 +3,7 @@
 
 .project-navigation{
     height: 500px;
-    background-color: aqua;
+    /* background-color: aqua; */
     position: relative;
 }
 :where(.archviz, .web-app, .cinematic, .showcase){
@@ -11,20 +11,24 @@
     position: absolute;
     transition: 500ms;
 }
-:where(.archviz, .web-app, .cinematic, .showcase)[active='false']{
-    filter: brightness(0.8);
-    clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
-    width: 500px;
-}
-:where(.archviz, .web-app, .cinematic, .showcase):hover{
-    transform: scale(1.1);
-    filter: brightness(1);
+:where(.archviz, .web-app, .cinematic, .showcase):not(:hover){
+    animation: zIndexFix 500ms;
 }
 :where(.archviz, .web-app, .cinematic, .showcase)[active='true']{
     filter: brightness(1); 
     /* clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500'); */
     clip-path: path('M 0 500 L 300 0 L 1000 0 L 700 500 L 0 500');
     width: 1000px;
+}
+:where(.archviz, .web-app, .cinematic, .showcase)[active='false']{
+    filter: brightness(0.80);
+    clip-path: path('M 0 500 L 300 0 L 400 0 L 100 500 L 0 500');
+    width: 500px;
+}
+:where(.archviz, .web-app, .cinematic, .showcase):hover{
+    transform: scale(1.05);
+    filter: brightness(1);
+    z-index: 2;
 }
 
 .project-navigation h3{
@@ -33,7 +37,8 @@
     left: 75px;
     transform-origin: 0;
     transform: rotate(-59deg);
-    border-top-left-radius: 2rem;
+    text-transform: capitalize;
+    border-top-left-radius: 1.5rem;
     padding-left: 2rem;
     width: 100%;
     margin-right: 0;
@@ -47,24 +52,29 @@ h3[active='true']{
     background-color: var(--black);
 }
 .archviz{
-    background-color: var(--green);
+    background-color: var(--blue);
     left:0;
 }
 .web-app{
-    left:100px;
-    background-color: navajowhite;
+    left:700px;
+    background-color: aquamarine;
 
 }
 .cinematic{
-    left: 200px;
+    left: 800px;
     background-color: var(--green);
 }
 .showcase{
-    left: 300px;
+    left: 900px;
     background-color: navajowhite;
 
 }
 
+@keyframes zIndexFix {
+    0%, 100%{
+        z-index: 1;
+    }
+}
 
 
 
@@ -75,6 +85,10 @@ h3[active='true']{
 .cinematic-section,
 .showcase-section{
     display: block;
+}
+:where(.archviz-section,.web-app-section,.cinematic-section,.showcase-section) h2{
+    text-transform: capitalize;
+    margin-bottom: 3rem;
 }
 
 .hide{
