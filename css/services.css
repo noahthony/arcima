@@ -17,7 +17,7 @@
     position: absolute;
     transition: 500ms;
     background-size: cover;
-    border-image: fill 1 linear-gradient(to right,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-image: fill 1 linear-gradient(to right,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 
 }
 :where(.archviz, .web-app, .cinematic, .showcase):not(:hover){
