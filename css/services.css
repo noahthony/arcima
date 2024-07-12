@@ -1,10 +1,14 @@
 
-
+.page-title{
+    position: relative;
+    top: 3rem;
+}
 
 .project-navigation{
     height: 500px;
     /* background-color: aqua; */
     position: relative;
+    margin-top: 0;
 }
 :where(.archviz, .web-app, .cinematic, .showcase){
     height: 500px;
