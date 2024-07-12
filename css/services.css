@@ -10,10 +10,15 @@
     position: relative;
     margin-top: 0;
 }
+
+
 :where(.archviz, .web-app, .cinematic, .showcase){
     height: 500px;
     position: absolute;
     transition: 500ms;
+    background-size: cover;
+    border-image: fill 1 linear-gradient(to right,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
 }
 :where(.archviz, .web-app, .cinematic, .showcase):not(:hover){
     animation: zIndexFix 500ms;
@@ -23,6 +28,8 @@
     /* clip-path: path('M 0 500 L 300 0 L 800 0 L 500 500 L 0 500'); */
     clip-path: path('M 0 500 L 300 0 L 1000 0 L 700 500 L 0 500');
     width: 1000px;
+    border-image: fill 1 linear-gradient(to right,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+
 }
 :where(.archviz, .web-app, .cinematic, .showcase)[active='false']{
     filter: brightness(0.80);
@@ -30,7 +37,7 @@
     width: 500px;
 }
 :where(.archviz, .web-app, .cinematic, .showcase):hover{
-    transform: scale(1.05);
+    transform: scale(1.08);
     filter: brightness(1);
     z-index: 2;
 }
@@ -58,21 +65,20 @@ h3[active='true']{
     padding-left: 5rem;
 }
 .archviz{
-    background-color: var(--blue);
     left:0;
+    background-image: url('assets/Medias/img/projects/website_1197px.png');
 }
 .web-app{
     left:700px;
-    background-color: aquamarine;
-
+    background-image: url('assets/Medias/img/projects/archviz/imperial_1.png');
 }
 .cinematic{
     left: 800px;
-    background-color: var(--green);
+    background-image: url('assets/Medias/img/projects/cinematic/fan_1.png');
 }
 .showcase{
     left: 900px;
-    background-color: navajowhite;
+    background-image: url('assets/Medias/img/projects/product/Boss_1.jpeg');
 
 }
 
